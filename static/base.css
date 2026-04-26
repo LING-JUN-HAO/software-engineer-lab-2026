@@ -135,6 +135,10 @@ a {
   margin-right: 4px;
 }
 
+.pr-16{
+  padding-right: 16px;
+}
+
 .py-80 {
   padding: 80px 0;
 }
