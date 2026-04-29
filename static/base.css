@@ -176,7 +176,8 @@ a {
   gap: 24px;
 }
 
-.gap-12 {
+.gap-12,
+.gap-md-12 {
   gap: 12px;
 }
 

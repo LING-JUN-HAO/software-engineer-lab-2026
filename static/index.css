@@ -53,12 +53,33 @@
     text-align: center;
   }
 
+  /* ✨✨✨ 第一個選單項目增加上方間距 */
+  .nav-list li:first-child {
+    padding-top: 12px;
+  }
+
+  /* ✨✨✨ 最後一個選單項目增加下方間距 */
+  .nav-list li:last-child {
+    padding-bottom: 12px;
+  }
+
   /* 主導覽列展開狀態 */
   .nav-list.active {
     opacity: 1; /* 讓內容顯示出來 */
-    max-height: 100%; /* 展開導覽列高度 */
+    max-height: 176px; /* ✨✨✨ 使用固定高度控制展開範圍，讓動畫更穩定 */
     transition:
       opacity 0.3s ease-in,
       max-height 0.3s ease-in; /* 加入淡入與展開動畫 */
+  }
+
+  /* ✨✨✨ 在行動裝置 */
+  .gap-md-12 {
+    gap: 12px;
+  }
+
+  /* ✨✨✨ 行動裝置版導覽文字樣式  */
+  .label-mobile-sm {
+    font-size: 14px;
+    font-weight: 500;
   }
 }
