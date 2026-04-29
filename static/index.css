@@ -46,17 +46,17 @@
   .nav-list {
     opacity: 0; /* 讓內容透明，但元素本身仍會佔據版面空間 */
     max-height: 0px; /* 將高度收合為 0，避免元素佔據垂直空間 */
+    display: flex; /* 顯示導覽列，並啟用 flex 排版 */
+    flex-direction: column; /* 手機版選單項目改為垂直排列 */
     overflow: hidden; /* 隱藏超出 max-height 範圍的內容 */
+    width: 100%; /* 讓導覽列寬度佔滿父層，搭配 flex-wrap 使其換行顯示 */
+    text-align: center;
   }
 
   /* 主導覽列展開狀態 */
   .nav-list.active {
     opacity: 1; /* 讓內容顯示出來 */
     max-height: 100%; /* 展開導覽列高度 */
-    display: flex; /* 顯示導覽列，並啟用 flex 排版 */
-    flex-direction: column; /* 手機版選單項目改為垂直排列 */
-    width: 100%; /* 讓導覽列寬度佔滿父層，搭配 flex-wrap 使其換行顯示 */
-    text-align: center;
     transition:
       opacity 0.3s ease-in,
       max-height 0.3s ease-in; /* 加入淡入與展開動畫 */
