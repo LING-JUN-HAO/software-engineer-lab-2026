@@ -160,6 +160,14 @@ a {
   display: flex;
 }
 
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -189,6 +197,22 @@ a {
   margin-right: 4px;
 }
 
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.pb-4 {
+  padding-bottom: 4px;
+}
+
 .py-80 {
   padding: 80px 0;
 }
@@ -197,9 +221,37 @@ a {
   padding-right: 16px;
 }
 
+.text-neutral-700 {
+  color: var(--color-neutral-700);
+}
+
+.bg-neutral-700 {
+  background-color: var(--color-neutral-700);
+}
+
+.text-neutral-0 {
+  color: var(--color-neutral-0);
+}
+
 .sticky-top {
   position: sticky;
   top: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.h-80 {
+  height: 80px;
+}
+
+.w-80 {
+  width: 80px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 /* container 設定 */
@@ -216,6 +268,24 @@ a {
 
 .col-2 {
   --span: 2;
+  --gap-count: calc(var(--span) - 1);
+  width: calc(
+    (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
+      var(--gutter) * var(--gap-count)
+  );
+}
+
+.col-5 {
+  --span: 5;
+  --gap-count: calc(var(--span) - 1);
+  width: calc(
+    (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
+      var(--gutter) * var(--gap-count)
+  );
+}
+
+.col-7 {
+  --span: 7;
   --gap-count: calc(var(--span) - 1);
   width: calc(
     (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +

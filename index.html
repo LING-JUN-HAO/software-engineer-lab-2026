@@ -13,53 +13,92 @@
     <title>2026 軟體工程師體驗營 - 主線任務 4</title>
   </head>
   <body>
-    <!-- 遮罩元素 -->
-    <div class="mask"></div>
+    <div class="placeholder">導覽列</div>
 
-    <header class="sticky-top">
-      <nav class="main-nav">
-        <div class="container">
-          <div class="col-12">
-            <div class="d-flex flex-wrap align-items-center">
-              <!-- 網站標誌（logo） -->
-              <a class="logo" href="#">
-                <picture>
-                  <source
-                    srcset="
-                      https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-mobile.svg
-                    "
-                    media="(max-width: 375px)"
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-pc.svg"
-                    alt=""
-                  />
-                </picture>
-              </a>
+    <section class="hero">
+      <div class="container h-full">
+        <div class="d-flex align-items-center h-full relative">
+          <div class="col-5 text-neutral-700">
+            <!-- 主要標題 -->
+            <h1 class="heading-xxxl mb-24">
+              Hello<br />
+              I’m Nelson
+            </h1>
 
-              <!-- 行動版選單按鈕（漢堡按鈕） -->
-              <button class="btn-menu ml-auto" type="button">
-                <span class="material-symbols-outlined">dehaze</span>
-              </button>
+            <!-- 內文 -->
+            <p class="paragraph-md pb-4">
+              我是一個擁有 10 年經驗的 UIUX 設計師 和 前端工程師
+            </p>
+            <p class="paragraph-md mb-60">
+              喜歡把美學和程式結合，打造一個又一個精美的網頁設計！
+            </p>
 
-              <!-- 主導覽選單 -->
-              <ul
-                class="nav-list label-md label-mobile-sm d-flex gap-24 ml-auto gap-md-12"
+            <!-- 按鈕群組 -->
+            <div class="label-md">
+              <button
+                class="btn bg-neutral-700 text-neutral-0 mr-24"
+                type="button"
               >
-                <li><a class="nav-link" href="#">服務項目</a></li>
-                <li><a class="nav-link" href="#">專案作品</a></li>
-                <li><a class="nav-link" href="#">部落格</a></li>
-                <li><a class="nav-link" href="#">與我聯絡</a></li>
-              </ul>
+                與我聯絡
+              </button>
+              <button class="btn resume" type="button">我的履歷</button>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+          <div class="col-7 h-full relative ml-auto">
+            <img
+              class="main-pic"
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_person.png?raw=true"
+              alt=""
+            />
+            <img
+              class="decorate-1"
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_1.png?raw=true"
+              alt=""
+            />
+            <img
+              class="decorate-2"
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_2.png?raw=true"
+              alt=""
+            />
+          </div>
 
-    <!-- 頁面內容佔位區塊，用於模擬實際內容高度 -->
-    <section class="placeholder">Hello World！</section>
-    <!-- JavaScript 建議放在 body 結尾載入，避免阻塞頁面渲染 -->
-    <script src="./index.js"></script>
+          <!-- 裝飾圖片 -->
+
+          <!-- 左下方小花 -->
+          <img
+            class="decorate-3 w-80 h-80 flower-left-bottom"
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true"
+            alt=""
+          />
+          <!-- 左下方小花旁的線條 -->
+          <img
+            class="decorate-5"
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_5.png?raw=true"
+            alt=""
+          />
+
+          <!-- 左上方小花旁的線條 -->
+          <img
+            class="decorate-4"
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_4.png?raw=true"
+            alt=""
+          />
+
+          <!-- 左上方小花 -->
+          <img
+            class="decorate-3 flower-left-top"
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true"
+            alt=""
+          />
+
+          <!-- 右上方小花 -->
+          <img
+            class="decorate-3 flower-right-center"
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
