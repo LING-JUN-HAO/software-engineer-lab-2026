@@ -2,6 +2,10 @@
 
 .main-nav {
   background-color: var(--color-primary-50);
+  /* ✨✨✨ 讓導覽列一直保持在上方 */
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -10,6 +14,8 @@
 
 .nav-list {
   color: var(--color-neutral-700);
+  /* ✨✨✨ 原先由上層提供背景色；改為絕對定位後，需在選單本身補上背景色 */
+  background-color: var(--color-primary-50);
 }
 
 .nav-link {
@@ -29,12 +35,12 @@
 
 /* 頁面內容佔位區塊，用於模擬實際內容高度 */
 .placeholder {
-  height: 100vh;
+  height: 300vh;
   background-color: #fa0;
 }
 
 @media (max-width: 375px) {
-  /* ✨✨✨ 手機版套用的 logo 樣式  */
+  /* 手機版套用的 logo 樣式  */
   .logo {
     padding: 14px 0;
   }
@@ -42,8 +48,8 @@
   /* 漢堡選單手機版顯示 */
   .btn-menu {
     display: block;
-    border: 1px solid var(--color-neutral-700); /* ✨✨✨ 手機版漢堡選單有一個外框 */
-    border-radius: 50%; /* ✨✨✨ 使外框變成圓形  */
+    border: 1px solid var(--color-neutral-700); /* 手機版漢堡選單有一個外框 */
+    border-radius: 50%; /* 使外框變成圓形  */
   }
 
   /* 
@@ -58,14 +64,19 @@
     overflow: hidden; /* 隱藏超出 max-height 範圍的內容 */
     width: 100%; /* 讓導覽列寬度佔滿父層，搭配 flex-wrap 使其換行顯示 */
     text-align: center;
+
+    /* ✨✨✨ 改成絕對定位的方式*/
+    position: absolute;
+    top: 60px;
+    left: 0px;
   }
 
-  /* ✨✨✨ 第一個選單項目增加上方間距 */
+  /* 第一個選單項目增加上方間距 */
   .nav-list li:first-child {
     padding-top: 12px;
   }
 
-  /* ✨✨✨ 最後一個選單項目增加下方間距 */
+  /* 最後一個選單項目增加下方間距 */
   .nav-list li:last-child {
     padding-bottom: 12px;
   }
@@ -73,20 +84,35 @@
   /* 主導覽列展開狀態 */
   .nav-list.active {
     opacity: 1; /* 讓內容顯示出來 */
-    max-height: 176px; /* ✨✨✨ 使用固定高度控制展開範圍，讓動畫更穩定 */
+    max-height: 176px; /* 使用固定高度控制展開範圍，讓動畫更穩定 */
     transition:
       opacity 0.3s ease-in,
       max-height 0.3s ease-in; /* 加入淡入與展開動畫 */
   }
 
-  /* ✨✨✨ 手機版套用的 gap 規則 */
+  /* 手機版套用的 gap 規則 */
   .gap-md-12 {
     gap: 12px;
   }
 
-  /* ✨✨✨ 手機版導覽文字樣式  */
+  /* 手機版導覽文字樣式  */
   .label-mobile-sm {
     font-size: 14px;
     font-weight: 500;
+  }
+
+  /* ✨✨✨ 遮罩樣式 */
+  .menu-open .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  /* ✨✨✨ body 要隱藏捲軸 */
+  body.menu-open {
+    overflow: hidden;
   }
 }

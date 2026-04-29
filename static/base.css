@@ -197,6 +197,11 @@ a {
   padding-right: 16px;
 }
 
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
 /* container 設定 */
 
 .container {
