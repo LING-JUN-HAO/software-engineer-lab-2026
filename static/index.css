@@ -34,9 +34,16 @@
 }
 
 @media (max-width: 375px) {
+  /* ✨✨✨ 手機版套用的 logo 樣式  */
+  .logo {
+    padding: 14px 0;
+  }
+
   /* 漢堡選單手機版顯示 */
   .btn-menu {
     display: block;
+    border: 1px solid var(--color-neutral-700); /* ✨✨✨ 手機版漢堡選單有一個外框 */
+    border-radius: 50%; /* ✨✨✨ 使外框變成圓形  */
   }
 
   /* 
@@ -72,12 +79,12 @@
       max-height 0.3s ease-in; /* 加入淡入與展開動畫 */
   }
 
-  /* ✨✨✨ 在行動裝置 */
+  /* ✨✨✨ 手機版套用的 gap 規則 */
   .gap-md-12 {
     gap: 12px;
   }
 
-  /* ✨✨✨ 行動裝置版導覽文字樣式  */
+  /* ✨✨✨ 手機版導覽文字樣式  */
   .label-mobile-sm {
     font-size: 14px;
     font-weight: 500;
