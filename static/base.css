@@ -197,8 +197,20 @@ a {
   margin-right: 4px;
 }
 
+.mb-12 {
+  margin-bottom: 12px;
+}
+
 .mb-24 {
   margin-bottom: 24px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mr-12 {
+  margin-right: 12px;
 }
 
 .mr-24 {
@@ -211,6 +223,14 @@ a {
 
 .pb-4 {
   padding-bottom: 4px;
+}
+
+.p-24 {
+  padding: 24px;
+}
+
+.p-12 {
+  padding: 12px;
 }
 
 .py-80 {
@@ -229,6 +249,14 @@ a {
   background-color: var(--color-neutral-700);
 }
 
+.bg-primary-50 {
+  background-color: var(--color-primary-50);
+}
+
+.bg-primary-900 {
+  background-color: var(--color-primary-900);
+}
+
 .text-neutral-0 {
   color: var(--color-neutral-0);
 }
@@ -236,6 +264,10 @@ a {
 .sticky-top {
   position: sticky;
   top: 0;
+}
+
+.rounded-circle {
+  border-radius: 50%;
 }
 
 .relative {
@@ -258,9 +290,30 @@ a {
   min-height: 0px;
 }
 
-/* ✨✨✨ z-index 層級控制（數字越大越上層） */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+/* 隱藏捲軸寬度 */
+.hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari 專用 */
+  }
+}
+
+/* z-index 層級控制（數字越大越上層） */
 .z-index-1 {
   z-index: 1;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-28 {
+  font-size: 28px;
 }
 
 /* container 設定 */
@@ -277,6 +330,15 @@ a {
 
 .col-2 {
   --span: 2;
+  --gap-count: calc(var(--span) - 1);
+  width: calc(
+    (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
+      var(--gutter) * var(--gap-count)
+  );
+}
+
+.col-3 {
+  --span: 3;
   --gap-count: calc(var(--span) - 1);
   width: calc(
     (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
@@ -332,6 +394,10 @@ a {
     font-weight: 500;
   }
 
+  .mb-md-8 {
+    margin-bottom: 8px;
+  }
+
   .mb-md-32 {
     margin-bottom: 32px;
   }
@@ -378,14 +444,57 @@ a {
     order: 2;
   }
 
-  /* 手機版套用的 gap 規則 */
   .gap-md-12 {
     gap: 12px;
   }
 
-  /* 手機版導覽文字樣式  */
   .label-mobile-sm {
     font-size: 14px;
     font-weight: 500;
+  }
+
+  .heading-mobile-xl {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .heading-mobile-sm {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .heading-mobile-xxxxs {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .heading-mobile-md {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .paragraph-mobile-sm {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .text-md-20 {
+    font-size: 20px;
+  }
+
+  .text-md-24 {
+    font-size: 24px;
+  }
+
+  .py-md-40 {
+    padding: 40px 0px;
+  }
+
+  .p-md-12 {
+    padding: 12px;
+  }
+  .mr-md-8 {
+    margin-right: 8px;
   }
 }
