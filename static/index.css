@@ -71,8 +71,66 @@
   bottom: 83.53px;
 }
 
+.decorate-6 {
+  display: none;
+}
+
 /* 佔位符，用於表示導覽列 */
 .placeholder {
   height: 64px;
   background-color: #fa0;
+}
+
+@media (max-width: 375px) {
+  .hero {
+    height: calc(100vh - 60px);
+  }
+
+  .decorate-1 {
+    top: 26px;
+    left: -27px;
+    width: 80px;
+    height: 79px;
+  }
+
+  .decorate-2 {
+    top: 274px;
+    right: -25px;
+    width: 80px;
+    height: 69px;
+  }
+
+  .decorate-3 {
+    &.flower-left-bottom {
+      width: 80px;
+      height: 80px;
+      top: 414px;
+      left: 249px;
+    }
+
+    &.flower-left-top {
+      display: none;
+    }
+
+    &.flower-right-center {
+      display: none;
+    }
+  }
+
+  .decorate-4,
+  .decorate-5 {
+    display: none;
+  }
+
+  /* 僅於手機版顯示的線條圖片 */
+  .decorate-6 {
+    position: absolute;
+    display: block;
+    top: 398.41px;
+    left: 134.5px;
+  }
+
+  .placeholder {
+    height: 60px;
+  }
 }
