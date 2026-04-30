@@ -13,8 +13,48 @@
     <title>2026 軟體工程師體驗營 - 主線任務 4</title>
   </head>
   <body>
-    <div class="placeholder">導覽列</div>
+    <!-- 遮罩元素 -->
+    <div class="mask z-index-1"></div>
+    <header class="sticky-top z-index-1">
+      <nav class="main-nav">
+        <div class="container">
+          <div class="col-12">
+            <div class="d-flex flex-wrap align-items-center">
+              <!-- 網站標誌（logo） -->
+              <a class="logo" href="#">
+                <picture>
+                  <source
+                    srcset="
+                      https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-mobile.svg
+                    "
+                    media="(max-width: 375px)"
+                  />
+                  <img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-pc.svg"
+                    alt=""
+                  />
+                </picture>
+              </a>
 
+              <!-- 行動版選單按鈕（漢堡按鈕） -->
+              <button class="btn-menu ml-auto" type="button">
+                <span class="material-symbols-outlined">dehaze</span>
+              </button>
+
+              <!-- 主導覽選單 -->
+              <ul
+                class="nav-list label-md label-mobile-sm d-flex gap-24 ml-auto gap-md-12"
+              >
+                <li><a class="nav-link" href="#">服務項目</a></li>
+                <li><a class="nav-link" href="#">專案作品</a></li>
+                <li><a class="nav-link" href="#">部落格</a></li>
+                <li><a class="nav-link" href="#">與我聯絡</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <section class="hero">
       <div class="container h-full">
         <div class="d-flex flex-md-col align-items-center h-full relative">
@@ -109,5 +149,6 @@
         </div>
       </div>
     </section>
+    <script src="./index.js"></script>
   </body>
 </html>
