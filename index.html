@@ -14,143 +14,49 @@
   </head>
   <body>
     <section class="projects bg-primary-50 py-80 py-md-40">
-      <div class="container">
-        <!--     標題 -->
-        <div class="text-neutral-700 mb-40 mb-md-24 d-flex align-items-start">
-          <h2>
-            <span class="d-block heading-xxxs heading-mobile-xxxxs"
-              >部落格</span
+      <div class="container relative">
+        <div class="d-flex gap-24 px-40 px-md-0 flex-md-col gap-md-0 mx-md--12">
+          <div class="col-5 col-md-12">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription.png?raw=true"
+              alt=""
+            />
+          </div>
+          <div class="col-7 col-md-12">
+            <div
+              class="text-neutral-0 px-40 py-md-40 px-md-12 h-full d-flex flex-col justify-content-center"
             >
-            <span class="d-block heading-xxxl heading-mobile-xl">BLOGS</span>
-          </h2>
-          <button
-            type="button"
-            class="btn-reset btn-outline lable-md rounded-full px-24 py-12 ml-auto"
-          >
-            探索更多
-          </button>
+              <!-- 標題 -->
+              <h2 class="mb-24 mb-md-12">
+                <span class="d-block heading-xxxs heading-mobile-xxxxs"
+                  >電子報訂閱</span
+                >
+                <span class="d-block heading-xxxl heading-mobile-xl"
+                  >SUBSCRIPTION</span
+                >
+              </h2>
+              <!-- 內文 -->
+              <p class="paragraph-md mb-24 paragraph-mobile-sm">
+                你也在追求設計美感與技術落地的完美平衡嗎？作為資深設計師兼工程師，我深知跨領域協作的痛點。訂閱電子報，我將分享如何利用
+                AI 工具提升產能！
+              </p>
+              <!-- 輸入框 -->
+              <div class="d-flex rounded-40 btn-outline p-8">
+                <input
+                  class="paragraph-md py-12 pl-24 text-neutral-0 bg-transparent border-0 focus-outline-0 flex-1 paragraph-mobile-sm"
+                  type="text"
+                  placeholder="電子信箱"
+                />
+                <button
+                  type="button"
+                  class="label-md btn-reset py-12 px-24 bg-neutral-0 rounded-full text-neutral-700 label-mobile-sm"
+                >
+                  送出
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--     部落個文章清單 -->
-        <ul
-          class="d-flex gap-24 text-neutral-700 overflow-x-auto hide-scrollbar"
-        >
-          <li class="col-4 blog-card">
-            <div>
-              <img
-                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_2.png?raw=true"
-                alt="手機顯示行動應用介面設計畫面"
-              />
-            </div>
-            <div>
-              <p class="paragraph-md mb-12 mb-md-8 paragraph-mobile-sm">
-                <span>UIUX 設計</span>
-                <span>・</span>
-                <span>網頁設計</span>
-                <span>・</span>
-                <span>前端技術</span>
-              </p>
-              <h3 class="heading-sm mb-12 mb-md-8 heading-mobile-xs">
-                10年職人手記：如何運用 Figma 與 Storybook
-                打造美感與邏輯兼具的企業級設計系統
-              </h3>
-              <div class="paragraph-sm d-flex paragraph-mobile-xs">
-                <time datetime="2022-10-16">
-                  <span class="d-mb-block">Oct 16,</span>
-                  <span class="d-mb-block">2022</span>
-                </time>
-                <div class="d-flex ml-auto gap-12">
-                  <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined mr-4"
-                      >visibility</span
-                    >
-                    <span>110 views</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined mr-4">share</span>
-                    <span>2 shares</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="col-4 blog-card">
-            <div>
-              <img
-                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_3.png?raw=true"
-                alt="桌面上的盆栽與復古相機"
-              />
-            </div>
-            <div>
-              <p class="paragraph-md mb-12 mb-md-8 paragraph-mobile-sm">
-                <span>品牌設計</span>
-                <span>・</span>
-                <span>平面設計</span>
-                <span>・</span>
-                <span>UIUX 設計</span>
-              </p>
-              <h3 class="heading-sm mb-12 mb-md-8 heading-mobile-xs">
-                從平面識別到數位體驗：以「植感生活」為例，探討跨媒體品牌視覺在網頁上的精準轉譯
-              </h3>
-              <div class="paragraph-sm d-flex paragraph-mobile-xs">
-                <time datetime="2022-10-16">
-                  <span class="d-mb-block">Oct 16,</span>
-                  <span class="d-mb-block">2022</span>
-                </time>
-                <div class="d-flex ml-auto gap-12">
-                  <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined mr-4"
-                      >visibility</span
-                    >
-                    <span>110 views</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined mr-4">share</span>
-                    <span>2 shares</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="col-4 blog-card">
-            <div>
-              <img
-                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_5.png?raw=true"
-                alt="筆電上顯示程式碼，使用者正在開發"
-              />
-            </div>
-            <div>
-              <p class="paragraph-md mb-12 mb-md-8 paragraph-mobile-sm">
-                <span>前端技術</span>
-                <span>・</span>
-                <span>後端架構</span>
-                <span>・</span>
-                <span>AI 趨勢應用</span>
-              </p>
-              <h3 class="heading-sm mb-12 mb-md-8 heading-mobile-xs">
-                揭開金融 App 的設計密碼：如何優化 Open Bank API
-                的複雜數據呈現與後端串接安全性
-              </h3>
-              <div class="paragraph-sm d-flex paragraph-mobile-xs">
-                <time datetime="2022-10-16">
-                  <span class="d-mb-block">Oct 16,</span>
-                  <span class="d-mb-block">2022</span>
-                </time>
-                <div class="d-flex ml-auto gap-12">
-                  <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined mr-4"
-                      >visibility</span
-                    >
-                    <span>110 views</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <span class="material-symbols-outlined mr-4">share</span>
-                    <span>2 shares</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
       </div>
     </section>
   </body>

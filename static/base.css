@@ -164,6 +164,10 @@ a {
   border: 1px solid currentColor;
 }
 
+.flex-1{
+  flex: 1;
+}
+
 .d-flex {
   display: flex;
 }
@@ -192,13 +196,16 @@ a {
   justify-content: space-between;
 }
 
-.gap-24 {
-  gap: 24px;
+.justify-content-center {
+  justify-content: center;
 }
 
-.gap-12,
-.gap-md-12 {
+.gap-12{
   gap: 12px;
+}
+
+.gap-24 {
+  gap: 24px;
 }
 
 .m-auto {
@@ -241,6 +248,10 @@ a {
   padding-bottom: 4px;
 }
 
+.p-8{
+  padding: 8px;
+}
+
 .p-12 {
   padding: 12px;
 }
@@ -273,8 +284,17 @@ a {
   padding-right: 24px;
 }
 
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .pr-16 {
   padding-right: 16px;
+}
+
+.pl-24 {
+  padding-left: 24px;
 }
 
 .pl-28 {
@@ -283,6 +303,14 @@ a {
 
 .text-neutral-700 {
   color: var(--color-neutral-700);
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-neutral-0{
+  background-color: var(--color-neutral-0);
 }
 
 .bg-neutral-700 {
@@ -306,6 +334,10 @@ a {
   top: 0;
 }
 
+.rounded-40 {
+  border-radius: 40px;
+}
+
 .rounded-full {
   border-radius: 999px;
 }
@@ -316,6 +348,14 @@ a {
 
 .relative {
   position: relative;
+}
+
+.border-0 {
+  border: none;
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 .h-80 {
@@ -332,6 +372,10 @@ a {
 
 .min-h-0 {
   min-height: 0px;
+}
+
+.focus-outline-0:focus-visible {
+  outline: 0;
 }
 
 /* 隱藏捲軸寬度 */
@@ -465,12 +509,27 @@ a {
     margin-bottom: 32px;
   }
 
+  .mx-md--12 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
   .mb-md-24 {
     margin-bottom: 24px;
   }
 
   .mb-md-12 {
     margin-bottom: 12px;
+  }
+
+  .px-md-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .px-md-12{
+    padding-left: 12px;
+    padding-right: 12px;
   }
   
   .px-md-16{
@@ -525,6 +584,10 @@ a {
     order: 2;
   }
 
+  .gap-md-0{
+    gap: 0;
+  }
+
   .gap-md-12 {
     gap: 12px;
   }
@@ -569,11 +632,6 @@ a {
     font-weight: 700;
   }
 
-  .paragraph-mobile-sm {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
   .paragraph-mobile-xs {
     font-size: 13px;
     font-weight: 500;
@@ -588,7 +646,8 @@ a {
   }
 
   .py-md-40 {
-    padding: 40px 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .p-md-12 {
