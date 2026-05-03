@@ -30,6 +30,16 @@
   box-sizing: border-box;
 }
 
+input,
+textarea{
+  font: inherit;
+  color: inherit;
+}
+
+textarea{
+  resize: none;
+}
+
 body {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -172,6 +182,10 @@ a {
   display: flex;
 }
 
+.d-none{
+  display: none;
+}
+
 .d-block {
   display: block;
 }
@@ -200,6 +214,10 @@ a {
   justify-content: center;
 }
 
+.gap-8{
+  gap: 8px;;
+}
+
 .gap-12{
   gap: 12px;
 }
@@ -220,6 +238,10 @@ a {
   margin-right: 4px;
 }
 
+.mb-4 {
+  margin-bottom: 4px;
+}
+
 .mb-12 {
   margin-bottom: 12px;
 }
@@ -230,6 +252,10 @@ a {
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.mb-92{
+  margin-bottom: 92px;
 }
 
 .mr-12 {
@@ -269,6 +295,11 @@ a {
   padding-bottom: 12px;
 }
 
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .py-28 {
   padding-top: 28px;
   padding-bottom: 28px;
@@ -301,6 +332,10 @@ a {
   padding-left: 28px;
 }
 
+.pl-32 {
+  padding-left: 32px;
+}
+
 .text-neutral-700 {
   color: var(--color-neutral-700);
 }
@@ -315,6 +350,10 @@ a {
 
 .bg-neutral-700 {
   background-color: var(--color-neutral-700);
+}
+
+.bg-primary-900 {
+  background-color: var(--color-primary-900);
 }
 
 .bg-primary-50 {
@@ -366,6 +405,10 @@ a {
   width: 80px;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .h-full {
   height: 100%;
 }
@@ -408,6 +451,10 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.line-height-1{
+  line-height: 1;
 }
 
 /* container 設定 */
@@ -501,6 +548,10 @@ a {
     font-weight: 500;
   }
 
+  .mb-md-0{
+    margin-bottom: 0px;
+  }
+
   .mb-md-8 {
     margin-bottom: 8px;
   }
@@ -522,6 +573,10 @@ a {
     margin-bottom: 12px;
   }
 
+  .pl-md-20{
+    padding-left: 20px;
+  }
+
   .px-md-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -535,6 +590,11 @@ a {
   .px-md-16{
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .py-md-16{
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .py-md-40 {
@@ -576,6 +636,14 @@ a {
     flex-direction: column;
   }
 
+  .d-md-block{
+    display: block;
+  }
+
+  .d-md-none{
+    display: none;
+  }
+
   .order-md-1 {
     order: 1;
   }
@@ -584,6 +652,10 @@ a {
     order: 2;
   }
 
+  .rounded-md-32{
+    border-radius: 32px;
+  }
+  
   .gap-md-0{
     gap: 0;
   }
