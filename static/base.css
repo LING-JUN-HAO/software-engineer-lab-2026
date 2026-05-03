@@ -160,6 +160,10 @@ a {
   cursor: pointer; /* 滑鼠移入時顯示手型游標 */
 }
 
+.btn-outline{
+  border: 1px solid currentColor;
+}
+
 .d-flex {
   display: flex;
 }
@@ -178,6 +182,10 @@ a {
 
 .align-items-center {
   align-items: center;
+}
+
+.align-items-start{
+  align-items: flex-start;
 }
 
 .justify-content-between {
@@ -326,10 +334,6 @@ a {
   min-height: 0px;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 /* 隱藏捲軸寬度 */
 .hide-scrollbar {
   scrollbar-width: none;
@@ -392,6 +396,15 @@ a {
   );
 }
 
+.col-4 {
+  --span: 4;
+  --gap-count: calc(var(--span) - 1);
+  width: calc(
+    (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
+      var(--gutter) * var(--gap-count)
+  );
+}
+
 .col-5 {
   --span: 5;
   --gap-count: calc(var(--span) - 1);
@@ -429,6 +442,10 @@ a {
 }
 
 @media (max-width: 375px) {
+  .d-mb-block{
+    display: block;
+  }
+  
   .heading-mobile-xl {
     font-size: 40px;
     font-weight: 700;
@@ -510,6 +527,10 @@ a {
 
   .gap-md-12 {
     gap: 12px;
+  }
+
+  .overflow-x-auto {
+    overflow-x: auto;
   }
 
   .label-mobile-sm {
