@@ -30,6 +30,16 @@
   box-sizing: border-box;
 }
 
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
 body {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -78,7 +88,7 @@ a {
 /* Heading - font-weight: 700 */
 
 .heading-xxxl {
-  font-size: 80px;
+  font-size: clamp(40px, 4.343vw + 23.71px, 80px);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -156,8 +166,28 @@ a {
 /* utility class 通用設定 */
 /* ----------- */
 
+.btn-reset {
+  border: 0;
+  background: transparent; /* 移除按鈕預設背景 */
+  color: inherit; /* 繼承父層文字顏色 */
+  font: inherit; /* 繼承父層字型設定 */
+  cursor: pointer; /* 滑鼠移入時顯示手型游標 */
+}
+
+.btn-outline {
+  border: 1px solid currentColor;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 .d-flex {
   display: flex;
+}
+
+.d-none {
+  display: none;
 }
 
 .d-block {
@@ -176,17 +206,32 @@ a {
   align-items: center;
 }
 
+.align-items-start {
+  align-items: flex-start;
+}
+
 .justify-content-between {
   justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-12 {
+  gap: 12px;
 }
 
 .gap-24 {
   gap: 24px;
 }
 
-.gap-12,
-.gap-md-12 {
-  gap: 12px;
+.m-auto {
+  margin: auto;
 }
 
 .ml-auto {
@@ -195,6 +240,10 @@ a {
 
 .mr-4 {
   margin-right: 4px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
 }
 
 .mb-12 {
@@ -207,6 +256,10 @@ a {
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.mb-92 {
+  margin-bottom: 92px;
 }
 
 .mr-12 {
@@ -225,28 +278,86 @@ a {
   padding-bottom: 4px;
 }
 
-.p-24 {
-  padding: 24px;
+.p-8 {
+  padding: 8px;
 }
 
 .p-12 {
   padding: 12px;
 }
 
+.p-24 {
+  padding: 24px;
+}
+
+.p-40 {
+  padding: 40px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-28 {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
 .py-80 {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .pr-16 {
   padding-right: 16px;
 }
 
+.pl-24 {
+  padding-left: 24px;
+}
+
+.pl-28 {
+  padding-left: 28px;
+}
+
+.pl-32 {
+  padding-left: 32px;
+}
+
 .text-neutral-700 {
   color: var(--color-neutral-700);
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-neutral-0 {
+  background-color: var(--color-neutral-0);
+}
+
 .bg-neutral-700 {
   background-color: var(--color-neutral-700);
+}
+
+.bg-primary-900 {
+  background-color: var(--color-primary-900);
 }
 
 .bg-primary-50 {
@@ -266,6 +377,14 @@ a {
   top: 0;
 }
 
+.rounded-40 {
+  border-radius: 40px;
+}
+
+.rounded-full {
+  border-radius: 999px;
+}
+
 .rounded-circle {
   border-radius: 50%;
 }
@@ -274,12 +393,24 @@ a {
   position: relative;
 }
 
+.border-0 {
+  border: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .h-80 {
   height: 80px;
 }
 
 .w-80 {
   width: 80px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .h-full {
@@ -292,6 +423,10 @@ a {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.focus-outline-0:focus-visible {
+  outline: 0;
 }
 
 /* 隱藏捲軸寬度 */
@@ -314,6 +449,26 @@ a {
 
 .text-28 {
   font-size: 28px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-cover-center {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
+
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* container 設定 */
@@ -339,6 +494,15 @@ a {
 
 .col-3 {
   --span: 3;
+  --gap-count: calc(var(--span) - 1);
+  width: calc(
+    (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
+      var(--gutter) * var(--gap-count)
+  );
+}
+
+.col-4 {
+  --span: 4;
   --gap-count: calc(var(--span) - 1);
   width: calc(
     (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) +
@@ -382,7 +546,11 @@ a {
   );
 }
 
-@media (max-width: 375px) {
+@media (max-width: 992px) {
+  .d-mb-block {
+    display: block;
+  }
+
   .heading-mobile-xl {
     font-size: 40px;
     font-weight: 700;
@@ -394,12 +562,21 @@ a {
     font-weight: 500;
   }
 
+  .mb-md-0 {
+    margin-bottom: 0px;
+  }
+
   .mb-md-8 {
     margin-bottom: 8px;
   }
 
   .mb-md-32 {
     margin-bottom: 32px;
+  }
+
+  .mx-md--12 {
+    margin-left: -12px;
+    margin-right: -12px;
   }
 
   .mb-md-24 {
@@ -410,8 +587,45 @@ a {
     margin-bottom: 12px;
   }
 
+  .pl-md-20 {
+    padding-left: 20px;
+  }
+
+  .px-md-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .px-md-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .px-md-16 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .py-md-16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .py-md-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .p-md-24 {
+    padding: 24px;
+  }
+
   .pb-md-24 {
     padding-bottom: 24px;
+  }
+
+  .pb-md-16 {
+    padding-bottom: 16px;
   }
 
   .mr-md-12 {
@@ -436,6 +650,14 @@ a {
     flex-direction: column;
   }
 
+  .d-md-block {
+    display: block;
+  }
+
+  .d-md-none {
+    display: none;
+  }
+
   .order-md-1 {
     order: 1;
   }
@@ -444,11 +666,28 @@ a {
     order: 2;
   }
 
+  .rounded-md-32 {
+    border-radius: 32px;
+  }
+
+  .gap-md-0 {
+    gap: 0;
+  }
+
   .gap-md-12 {
     gap: 12px;
   }
 
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+
   .label-mobile-sm {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .lable-mobile-sm {
     font-size: 14px;
     font-weight: 500;
   }
@@ -469,13 +708,18 @@ a {
     font-weight: 700;
   }
 
+  .heading-mobile-xs {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
   .heading-mobile-md {
     font-size: 24px;
     font-weight: 700;
   }
 
-  .paragraph-mobile-sm {
-    font-size: 14px;
+  .paragraph-mobile-xs {
+    font-size: 13px;
     font-weight: 500;
   }
 
@@ -488,7 +732,8 @@ a {
   }
 
   .py-md-40 {
-    padding: 40px 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .p-md-12 {
